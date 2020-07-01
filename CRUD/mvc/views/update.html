@@ -1,0 +1,99 @@
+
+<html>
+    <head>
+        <style type="text/css">
+            .navbar-nav.navbar-center {
+                position: absolute;
+                font-size: 40px;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+            /*
+            header {
+           background-color: red;
+           height:60px;
+         }*/
+         .navbar-collapse {
+             background-color:#58ED9B;
+             text-decoration-color: black;
+             
+         }
+         label {
+            font-size: 15px;
+            font-family:sans-serif;
+         }
+         body {
+                padding-left:10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                
+                }
+                th{
+            color:white;
+        }
+        td{
+            color: black;
+        }
+                main{
+                    padding-left: 30px;
+                }
+        input{
+            width: 155px;
+        }
+        </style >
+        <meta charset="utf-8">
+        <title>Update</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <header > 
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/list">Regresar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <li>Actualizar datos</li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body background="https://images6.alphacoders.com/774/774373.jpg">
+        <table  border="1" cellpadding="0" cellspacing="0" bordercolor="#fff">
+            <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Edad</th>
+            <th>Fecha de nacimiento</th>
+            <th>Sexo</th>
+            <th>Estado</th>
+            <th>Actualizar</th>
+            </tr>
+            <tr>
+            <td> <input type="number" name="1"></td>
+            <td ><input type="text" name="2"></td>
+            <td ><input type="text" name="3"></td>
+            <td ><input type="text" name="4"></td>
+            <td ><input type="number" name="5"></td>
+            <td ><input type="date" name="6"></td>
+            <td ><input type="text" name="7"></td>
+            <td ><input type="text" name="8"></td>
+            <td >
+                <center>
+                    <button>
+                        <label>Actualizar</label> 
+                     </button>     
+                </center>
+            </td>
+            </tr>
+            </table>
+    </body>
+</html>
+    
