@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <style type="text/css">
+            .navbar-nav.navbar-center {
+                position: absolute;
+                font-size: 40px;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+            /*
+            header {
+           background-color: red;
+           height:60px;
+         }*/
+         .navbar-collapse {
+             background-color:#58ED9B;
+             text-decoration-color: black;
+         }
+         h1 {
+            text-shadow: white;
+            text-align: center;
+            font-family:sans-serif;
+         }
+         body {
+                padding-left:10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                
+                }
+            center{
+                    padding-top: 200px;
+                }
+            button{
+                
+                width: 200px;
+                height: 100px;
+                font-size: 40px;
+               
+                border-radius: 20px;
+                background-color: aqua; 
+                
+            }
+            label{
+                color: black;
+                font-size: 30px;
+            }
+        </style >
+        <meta charset="utf-8">
+        <title>Menú</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <header > 
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-collapse collapse">
+                
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">.</a></li>
+                    <li><a href="/Pupdate"></a></li>
+                    <li><a href="/Pdelete"></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <li>Bienvenido</li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Plist"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body background="https://blog.fiatc.es/wp-content/uploads/2018/01/pasos-a-seguir-si-te-pierdes-en-el-bosque-1160x770.jpg">
+        <center>
+
+                <button  onclick="location.href='/Plist'" >
+                    <label>Empezar</label>
+                </button>
+           
+            
+        </center>
+    </body>
+</html>

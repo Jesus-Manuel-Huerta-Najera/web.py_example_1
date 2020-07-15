@@ -1,0 +1,16 @@
+Create database if not exists students_db;
+use students_db;
+create table alumnos(
+id int(11) not null auto_increment primary key,
+matricula int(11) not null,
+nombre varchar(30) not null,
+ap_p varchar(30) not null,
+ap_m varchar(30) not null,
+fecha varchar(20)not null,
+gen varchar(10) not null,
+estado varchar(30) not null
+);
+insert into alumnos(matricula,nombre,ap_p,ap_m,fecha,gen,estado)values(1718110393,'jesus','Huerta','Najera','15/07/2020','H','Hidalgo');
+CREATE USER 'student'@'localhost' IDENTIFIED BY 'student.1';
+GRANT ALL PRIVILEGES ON students_db.* TO 'student'@'localhost';
+FLUSH PRIVILEGES;

@@ -1,0 +1,108 @@
+$def with(result)
+<html>
+    <head>
+        <style type="text/css">
+            .navbar-nav.navbar-center {
+                position: absolute;
+                font-size: 40px;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+            /*
+            header {
+           background-color: red;
+           height:60px;
+         }*/
+         .navbar-collapse {
+             background-color:#58ED9B;
+             text-decoration-color: black;
+             
+         }
+         label {
+            font-size: 15px;
+            font-family:sans-serif;
+            color: black;
+         }
+         body {
+                padding-left:10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                
+                }
+                main{
+                    padding-left: 30px;
+                }
+        th{
+            color:white;
+        }
+        td{
+            color: white;
+        }
+        button{
+            color: black
+            
+        }
+        </style >
+        <meta charset="utf-8">
+        <title>Lista</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <header > 
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/">Regresar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <li>Lista de datos</li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Pinsert">Insertar</a></li>
+                    <li><a href="/Pdelete">Borrar</a></li>
+                    <li><a href="/Pview">Ver</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body background="https://images6.alphacoders.com/774/774373.jpg">
+        <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#fff">
+            <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Apellido 1</th>
+            <th>Apellido 2</th>
+            <th>Edad</th>
+            <th>Fecha de nacimiento</th>
+            <th>Sexo</th>
+            <th>Estado</th>
+            <th>Actualizar</th>
+            </tr>
+            <tbody>
+                $for row in result:
+                <tr>
+                <td >$row['id']</td>
+                <td >$row['matricula']</td>
+                <td >$row['nombre']</td>
+                <td >$row['ap_p']</td>
+                <td >$row['ap_m']</td>
+                <td >$row['fecha']</td>
+                <td >$row['gen']</td>
+                <td >$row['estado']</td>
+                <td >
+                    <center>
+                        <button type="submit" >
+                            <a href="/Pupdate"><label>Actualizar</label></a> 
+                         </button>     
+                    </center>
+                </td>
+                </tr>
+
+            </tbody>
+            
+            </table>
+    </body>
+</html>
