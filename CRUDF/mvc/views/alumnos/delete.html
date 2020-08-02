@@ -1,0 +1,131 @@
+$def with(result)
+<html>
+    <head>
+        <style type="text/css">
+            .navbar-nav.navbar-center {
+                position: absolute;
+                font-size: 40px;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+            /*
+            header {
+           background-color: red;
+           height:60px;
+         }*/
+         .navbar-collapse {
+             background-color:#58ED9B;
+             text-decoration-color: black;
+             
+         }
+         label {
+            font-size: 15px;
+            font-family:sans-serif;
+            color: white;
+         }
+         body {
+                padding-left:10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                
+                }
+                main{
+                    padding-left: 30px;
+                }
+        button{
+                
+                
+               
+                border-radius: 20px;
+                background-color: gray; 
+                
+            }
+        </style >
+        <meta charset="utf-8">
+        <title>Borrar</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <header > 
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/Plist">Regresar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <li>Borrar datos</li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body background="https://images6.alphacoders.com/774/774373.jpg">
+        <main role="main" class="container my-auto">
+            <div class="row" >
+                <div id="login" class="col-lg-12 offset-lg-4 col-md-6 offset-md-3 col-12">
+                    <img class="img-fluid mx-auto d-block rounded">
+                        <form method="POST">
+                            <input type="hidden" id="id" name="id" value="$result['id']">
+                            <div class="form-group">
+                                <label for="Matricula">Matricula</label>
+                                <input id="Matricula" name="Matricula"
+                                    class="form-control" type="number"
+                                    readonly
+                                    value="$result['matricula']">
+                            </div>
+                            <div class="form-group">
+                                <label for="Nombre"> Nombre</label>
+                                <input id="Nombre" name="Nombre"
+                                    class="form-control" type="text"
+                                    readonly
+                                    value="$result['nombre']">
+                            </div>
+                                <div class="form-group">
+                                    <label for="Primer_apellido"> Primer apellido</label>
+                                    <input id="Primer_apellido" name="Primer_apellido"
+                                        class="form-control" type="text"
+                                        readonly
+                                        value="$result['ap_p']">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Segundo_apellido"> Segundo apellido</label>
+                                    <input id="Segundo_apellido" name="Segundo_apellido"
+                                        class="form-control" type="text"
+                                        readonly
+                                        value="$result['ap_m']">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Fecha de nacimiento</label>
+                                    <input id="date" name="date"
+                                        class="form-control" type="date"
+                                        readonly
+                                        value="$result['fecha']">
+                                </div>
+                            <div class="form-group">
+                                <label for="Sexo"> Sexo</label>
+                                <input id="Sexo" name="Sexo"
+                                    class="form-control" type="text"
+                                    readonly
+                                    value="$result['gen']">
+                            </div>
+                            <div class="form-group">
+                                <label for="Estado">Estado</label>
+                                <input id="Estado" name="Estado"
+                                    class="form-control" type="text"
+                                    readonly
+                                    value="$result['estado']">
+                            </div >
+                            <button type="submit" class="btn btn-primary mb-2" >
+                                <a href="/Plist"><label>Borrar</label></a>
+                            </button>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </main>
+    </body>
+</html>

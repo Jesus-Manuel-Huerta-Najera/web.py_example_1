@@ -1,0 +1,94 @@
+$def with(result)
+<html>
+    <head>
+        <style type="text/css">
+            .navbar-nav.navbar-center {
+                position: absolute;
+                font-size: 40px;
+                left: 50%;
+                transform: translatex(-50%);
+            }
+            /*
+            header {
+           background-color: red;
+           height:60px;
+         }*/
+         .navbar-collapse {
+             background-color:#58ED9B;
+             text-decoration-color: black;
+             
+         }
+         th{
+            color:white;
+        }
+        td{
+            color: white;
+        }
+         label {
+            font-size: 15px;
+            font-family:sans-serif;
+            color: white;
+         }
+         body {
+                padding-left:10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                
+                }
+                main{
+                    padding-left: 30px;
+                }
+        </style >
+        <meta charset="utf-8">
+        <title>View</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <header > 
+        <nav class="navbar navbar-default" role="navigation" >
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/Plist">Regresar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-center">
+                    <li>Datos</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                 
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body background="https://images6.alphacoders.com/774/774373.jpg">  
+        <form>
+            <div class="form-group">
+              <label for="matricula">Matricula</label>
+              <input type="matricula" readonly class="form-control" id="matricula" name="matricula" value="$result['matricula']">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre de la persona</label>
+                <input type="text" readonly class="form-control" id="nombre" name="nombre" value="$result['nombre']">
+            </div>
+            <div class="form-group">
+                <label for="ap_p">Apellidos</label>
+                <input type="ap_p" readonly class="form-control" id="ap_p" name="ap_p" value="$result['ap_p']">
+                <p></p>
+                <input type="ap_m" readonly class="form-control" id="ap_m" name="ap_m" value="$result['ap_m']">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="text" readonly class="form-control" id="fecha" name="fecha" value="$result['fecha']">
+            </div>
+            <div class="form-group">
+                <label for="gen">Genero</label>
+                <input type="text" readonly class="form-control" id="gen" name="gen" value="$result['gen']">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" readonly class="form-control" id="estado" name="estado" value="$result['estado']">
+            </div>
+        </form>
+    </body>
+</html>
